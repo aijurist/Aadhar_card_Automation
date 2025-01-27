@@ -33,7 +33,6 @@ def preprocess_image(image_path):
 
 def extract_name_from_text(text):
     try:
-        # First, try extracting the name using keywords
         aadhaar_keywords = r'(To|Name|Name of Holder|Name Of Holder|Holder\'s Name)[:|\s]+([A-Za-z]+[\s]*[A-Za-z]*)+'
         match = re.search(aadhaar_keywords, text, re.IGNORECASE)
         if match:
